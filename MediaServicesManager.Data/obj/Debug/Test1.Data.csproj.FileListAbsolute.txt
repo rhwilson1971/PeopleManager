@@ -1,0 +1,8 @@
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\bin\Debug\Test1.Data.dll.config
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\bin\Debug\Test1.Data.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\bin\Debug\Test1.Data.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\bin\Debug\EntityFramework.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\bin\Debug\EntityFramework.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\obj\Debug\Test1.Data.csprojResolveAssemblyReference.cache
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\obj\Debug\Test1.Data.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1.Data\obj\Debug\Test1.Data.pdb

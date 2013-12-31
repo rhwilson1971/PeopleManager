@@ -1,0 +1,136 @@
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.App.csprojResolveAssemblyReference.cache
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\App.g.cs
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\Shell.baml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\Shell.g.cs
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.App.csproj.GenerateResource.Cache
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.exe.config
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\TestData.sdf
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.exe
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\EntityFramework.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Data.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Management.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Management.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Data.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\EntityFramework.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.Interactivity.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.Prism.MefExtensions.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager_Content.g.cs
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager_MarkupCompile.cache
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.g.resources
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.Properties.Resources.resources
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.exe
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\obj\Debug\PeopleManager.pdb
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Infrastructure.dll
+C:\Users\rwilson\documents\visual studio 2012\Projects\Test1\Test1\bin\Debug\PeopleManager.Infrastructure.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe.config
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.exe
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\TestData.sdf
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\EntityFramework.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\EntityFramework.xml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.xml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.xml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csprojResolveAssemblyReference.cache
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\Shell.baml
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\Shell.g.cs
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\App.g.cs
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager_Content.g.cs
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager_MarkupCompile.cache
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.g.resources
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.Properties.Resources.resources
+C:\Users\rwilson\Documents\Visual Studio 2012\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csproj.GenerateResource.Cache
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe.config
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.exe
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\TestData.sdf
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\EntityFramework.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\System.Windows.Interactivity.dll
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\EntityFramework.xml
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.xml
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.xml
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.xml
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\src\Projects\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csprojResolveAssemblyReference.cache
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\Shell.baml
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\Shell.g.cs
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\App.g.cs
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager_Content.g.cs
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager_MarkupCompile.cache
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.g.resources
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.Properties.Resources.resources
+C:\src\Projects\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csproj.GenerateResource.Cache
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe.config
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.exe
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\TestData.sdf
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.exe
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\EntityFramework.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Infrastructure.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Data.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\PeopleManager.Management.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\EntityFramework.xml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.xml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.Interactivity.xml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.Prism.MefExtensions.xml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csprojResolveAssemblyReference.cache
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\Shell.baml
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\Shell.g.cs
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\App.g.cs
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager_Content.g.cs
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager_MarkupCompile.cache
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.g.resources
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.Properties.Resources.resources
+C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager\obj\Debug\PeopleManager.App.csproj.GenerateResource.Cache

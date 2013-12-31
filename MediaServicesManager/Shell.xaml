@@ -1,0 +1,33 @@
+﻿<Window x:Class="MediaServicesManager.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:MediaServicesManager.Infrastructure;assembly=PeopleManager.Infrastructure"
+        xmlns:ud="clr-namespace:MediaServicesManager.Management.Views;assembly=PeopleManager.Management"
+        xmlns:cal="http://www.codeplex.com/CompositeWPF" 
+        Title="MainWindow" Height="768" Width="1024"
+        >
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <ContentControl
+                x:Name="MainContent"
+                cal:RegionManager.RegionName="{x:Static i:RegionNames.PeopleViewRegion}"
+                />
+        </Grid>
+       
+        <ItemsControl Grid.Row="1" x:Name="UserDetail" cal:RegionManager.RegionName="{x:Static i:RegionNames.UserDetailRegion}"></ItemsControl>
+        <!--<ItemsControl Grid.Row="1" Margin="0,0,0,10">
+            <ItemsControl.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ItemsControl x:Name="UserDetail" cal:RegionManager.RegionName="{x:Static i:RegionNames.UserDetailRegion}"/>
+                </ControlTemplate>
+            </ItemsControl.Template>
+        </ItemsControl>-->
+    </Grid>
+</Window>

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PeopleManager.Data.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PeopleManagerDataStoreContainer">
+    <EntitySet Name="Addresses" EntityType="PeopleManager.Data.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="People" EntityType="PeopleManager.Data.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PhoneNumbers" EntityType="PeopleManager.Data.Store.PhoneNumbers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Resources" EntityType="PeopleManager.Data.Store.Resources" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Programs" EntityType="PeopleManager.Data.Store.Programs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProgramDetails" EntityType="PeopleManager.Data.Store.ProgramDetails" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PersonAddress" Association="PeopleManager.Data.Store.FK_PersonAddress">
+      <End Role="People" EntitySet="People" />
+      <End Role="Addresses" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPhoneNumber" Association="PeopleManager.Data.Store.FK_PersonPhoneNumber">
+      <End Role="People" EntitySet="People" />
+      <End Role="PhoneNumbers" EntitySet="PhoneNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="ProgramProgramDetail" Association="PeopleManager.Data.Store.ProgramProgramDetail">
+      <End Role="Program" EntitySet="Programs" />
+      <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+    </AssociationSet>
+    <AssociationSet Name="ResourceProgramDetail" Association="PeopleManager.Data.Store.ResourceProgramDetail">
+      <End Role="Resource" EntitySet="Resources" />
+      <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+    </AssociationSet>
+    <AssociationSet Name="PersonProgramDetail" Association="PeopleManager.Data.Store.PersonProgramDetail">
+      <End Role="Person" EntitySet="People" />
+      <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Street1" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Street2" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="Street3" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="State" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Zip" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="AddressType" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="PersonPersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Image" Type="nvarchar" Nullable="true" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PhoneNumbers">
+    <Key>
+      <PropertyRef Name="PhoneId" />
+    </Key>
+    <Property Name="PhoneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="PhoneType" Type="nvarchar" Nullable="false" MaxLength="4000" />
+    <Property Name="PersonPersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Resources">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ResourceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="ProgramId" />
+    </Key>
+    <Property Name="ProgramId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" Nullable="false" />
+    <Property Name="TimeStart" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProgramDetails">
+    <Key>
+      <PropertyRef Name="ProgramDetailId" />
+    </Key>
+    <Property Name="ProgramDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProgramProgramId" Type="int" Nullable="false" />
+    <Property Name="ResourceResourceId" Type="int" Nullable="false" />
+    <Property Name="PersonPersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PersonAddress">
+    <End Role="People" Type="PeopleManager.Data.Store.People" Multiplicity="1" />
+    <End Role="Addresses" Type="PeopleManager.Data.Store.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Addresses">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPhoneNumber">
+    <End Role="People" Type="PeopleManager.Data.Store.People" Multiplicity="1" />
+    <End Role="PhoneNumbers" Type="PeopleManager.Data.Store.PhoneNumbers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhoneNumbers">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProgramProgramDetail">
+    <End Role="Program" Type="PeopleManager.Data.Store.Programs" Multiplicity="1" />
+    <End Role="ProgramDetail" Type="PeopleManager.Data.Store.ProgramDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Program">
+        <PropertyRef Name="ProgramId" />
+      </Principal>
+      <Dependent Role="ProgramDetail">
+        <PropertyRef Name="ProgramProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ResourceProgramDetail">
+    <End Role="Resource" Type="PeopleManager.Data.Store.Resources" Multiplicity="1" />
+    <End Role="ProgramDetail" Type="PeopleManager.Data.Store.ProgramDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="ProgramDetail">
+        <PropertyRef Name="ResourceResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonProgramDetail">
+    <End Role="Person" Type="PeopleManager.Data.Store.People" Multiplicity="1" />
+    <End Role="ProgramDetail" Type="PeopleManager.Data.Store.ProgramDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="ProgramDetail">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PeopleManager.Data" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TestDataEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Addresses" EntityType="PeopleManager.Data.Address" />
+          <EntitySet Name="People" EntityType="PeopleManager.Data.Person" />
+          <EntitySet Name="PhoneNumbers" EntityType="PeopleManager.Data.PhoneNumber" />
+          <AssociationSet Name="FK_PersonAddress" Association="PeopleManager.Data.FK_PersonAddress">
+            <End Role="People" EntitySet="People" />
+            <End Role="Addresses" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonPhoneNumber" Association="PeopleManager.Data.FK_PersonPhoneNumber">
+            <End Role="People" EntitySet="People" />
+            <End Role="PhoneNumbers" EntitySet="PhoneNumbers" />
+          </AssociationSet>
+          <EntitySet Name="Resources" EntityType="PeopleManager.Data.Resource" />
+          <EntitySet Name="Programs" EntityType="PeopleManager.Data.Program" />
+          <EntitySet Name="ProgramDetails" EntityType="PeopleManager.Data.ProgramDetail" />
+          <AssociationSet Name="ProgramProgramDetail" Association="PeopleManager.Data.ProgramProgramDetail">
+            <End Role="Program" EntitySet="Programs" />
+            <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+          </AssociationSet>
+          <AssociationSet Name="ResourceProgramDetail" Association="PeopleManager.Data.ResourceProgramDetail">
+            <End Role="Resource" EntitySet="Resources" />
+            <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+          </AssociationSet>
+          <AssociationSet Name="PersonProgramDetail" Association="PeopleManager.Data.PersonProgramDetail">
+            <End Role="Person" EntitySet="People" />
+            <End Role="ProgramDetail" EntitySet="ProgramDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="AddressId" />
+          </Key>
+          <Property Name="AddressId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Street1" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Street2" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Street3" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="AddressType" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PersonPersonId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="PeopleManager.Data.FK_PersonAddress" FromRole="Addresses" ToRole="People" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="PersonId" />
+          </Key>
+          <Property Name="PersonId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Image" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Addresses" Relationship="PeopleManager.Data.FK_PersonAddress" FromRole="People" ToRole="Addresses" />
+          <NavigationProperty Name="PhoneNumbers" Relationship="PeopleManager.Data.FK_PersonPhoneNumber" FromRole="People" ToRole="PhoneNumbers" />
+          <NavigationProperty Name="ProgramDetails" Relationship="PeopleManager.Data.PersonProgramDetail" FromRole="Person" ToRole="ProgramDetail" />
+        </EntityType>
+        <EntityType Name="PhoneNumber">
+          <Key>
+            <PropertyRef Name="PhoneId" />
+          </Key>
+          <Property Name="PhoneId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PhoneType" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="PersonPersonId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="PeopleManager.Data.FK_PersonPhoneNumber" FromRole="PhoneNumbers" ToRole="People" />
+        </EntityType>
+        <Association Name="FK_PersonAddress">
+          <End Role="People" Type="PeopleManager.Data.Person" Multiplicity="1" />
+          <End Role="Addresses" Type="PeopleManager.Data.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="People">
+              <PropertyRef Name="PersonId" />
+            </Principal>
+            <Dependent Role="Addresses">
+              <PropertyRef Name="PersonPersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonPhoneNumber">
+          <End Role="People" Type="PeopleManager.Data.Person" Multiplicity="1" />
+          <End Role="PhoneNumbers" Type="PeopleManager.Data.PhoneNumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="People">
+              <PropertyRef Name="PersonId" />
+            </Principal>
+            <Dependent Role="PhoneNumbers">
+              <PropertyRef Name="PersonPersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ResourceId" />
+          </Key>
+          <Property Type="Int32" Name="ResourceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="ProgramDetails" Relationship="PeopleManager.Data.ResourceProgramDetail" FromRole="Resource" ToRole="ProgramDetail" />
+        </EntityType>
+        <EntityType Name="Program">
+          <Key>
+            <PropertyRef Name="ProgramId" />
+          </Key>
+          <Property Type="Int32" Name="ProgramId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="DateTime" Name="TimeStart" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <Property Type="DateTime" Name="EndTime" Nullable="false" />
+          <NavigationProperty Name="ProgramDetails" Relationship="PeopleManager.Data.ProgramProgramDetail" FromRole="Program" ToRole="ProgramDetail" />
+        </EntityType>
+        <EntityType Name="ProgramDetail">
+          <Key>
+            <PropertyRef Name="ProgramDetailId" />
+          </Key>
+          <Property Type="Int32" Name="ProgramDetailId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Program" Relationship="PeopleManager.Data.ProgramProgramDetail" FromRole="ProgramDetail" ToRole="Program" />
+          <Property Type="Int32" Name="ProgramProgramId" Nullable="false" />
+          <NavigationProperty Name="Resource" Relationship="PeopleManager.Data.ResourceProgramDetail" FromRole="ProgramDetail" ToRole="Resource" />
+          <Property Type="Int32" Name="ResourceResourceId" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="PeopleManager.Data.PersonProgramDetail" FromRole="ProgramDetail" ToRole="Person" />
+          <Property Type="Int32" Name="PersonPersonId" Nullable="false" />
+        </EntityType>
+        <Association Name="ProgramProgramDetail">
+          <End Type="PeopleManager.Data.Program" Role="Program" Multiplicity="1" />
+          <End Type="PeopleManager.Data.ProgramDetail" Role="ProgramDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Program">
+              <PropertyRef Name="ProgramId" />
+            </Principal>
+            <Dependent Role="ProgramDetail">
+              <PropertyRef Name="ProgramProgramId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ResourceProgramDetail">
+          <End Type="PeopleManager.Data.Resource" Role="Resource" Multiplicity="1" />
+          <End Type="PeopleManager.Data.ProgramDetail" Role="ProgramDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resource">
+              <PropertyRef Name="ResourceId" />
+            </Principal>
+            <Dependent Role="ProgramDetail">
+              <PropertyRef Name="ResourceResourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PersonProgramDetail">
+          <End Type="PeopleManager.Data.Person" Role="Person" Multiplicity="1" />
+          <End Type="PeopleManager.Data.ProgramDetail" Role="ProgramDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="PersonId" />
+            </Principal>
+            <Dependent Role="ProgramDetail">
+              <PropertyRef Name="PersonPersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PeopleManagerDataStoreContainer" CdmEntityContainer="TestDataEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.Address)">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="Street1" ColumnName="Street1" />
+          <ScalarProperty Name="Street2" ColumnName="Street2" />
+          <ScalarProperty Name="Street3" ColumnName="Street3" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+          <ScalarProperty Name="PersonPersonId" ColumnName="PersonPersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhoneNumbers">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.PhoneNumber)">
+        <MappingFragment StoreEntitySet="PhoneNumbers">
+          <ScalarProperty Name="PhoneId" ColumnName="PhoneId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="PhoneType" ColumnName="PhoneType" />
+          <ScalarProperty Name="PersonPersonId" ColumnName="PersonPersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resources">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.Resource)">
+        <MappingFragment StoreEntitySet="Resources">
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programs">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.Program)">
+        <MappingFragment StoreEntitySet="Programs">
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgramDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(PeopleManager.Data.ProgramDetail)">
+        <MappingFragment StoreEntitySet="ProgramDetails">
+          <ScalarProperty Name="ProgramDetailId" ColumnName="ProgramDetailId" />
+          <ScalarProperty Name="ProgramProgramId" ColumnName="ProgramProgramId" />
+          <ScalarProperty Name="ResourceResourceId" ColumnName="ResourceResourceId" />
+          <ScalarProperty Name="PersonPersonId" ColumnName="PersonPersonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

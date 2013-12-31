@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Test1DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Test1DataModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="People" EntityType="Test1DataModel.Person" />
+    <EntitySet Name="Addresses" EntityType="Test1DataModel.Address" />
+    <EntitySet Name="PhoneNumbers" EntityType="Test1DataModel.PhoneNumber" />
+    <AssociationSet Name="PersonAddress" Association="Test1DataModel.PersonAddress">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPhoneNumber" Association="Test1DataModel.PersonPhoneNumber">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PhoneNumber" EntitySet="PhoneNumbers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Type="Int32" Name="PersonId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" Nullable="false" />
+    <Property Type="String" Name="LastName" Nullable="false" />
+    <NavigationProperty Name="Addresses" Relationship="Test1DataModel.PersonAddress" FromRole="Person" ToRole="Address" />
+    <NavigationProperty Name="PhoneNumbers" Relationship="Test1DataModel.PersonPhoneNumber" FromRole="Person" ToRole="PhoneNumber" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Type="Int32" Name="AddressId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Street1" Nullable="false" />
+    <Property Type="String" Name="Street2" Nullable="true" />
+    <Property Type="String" Name="Street3" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="false" />
+    <Property Type="String" Name="State" Nullable="false" />
+    <Property Type="String" Name="Zip" Nullable="false" />
+    <Property Type="String" Name="AddressType" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Test1DataModel.PersonAddress" FromRole="Address" ToRole="Person" />
+    <Property Type="Int32" Name="PersonPersonId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhoneNumber">
+    <Key>
+      <PropertyRef Name="PhoneId" />
+    </Key>
+    <Property Type="Int32" Name="PhoneId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Number" Nullable="false" />
+    <Property Type="String" Name="PhoneType" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Test1DataModel.PersonPhoneNumber" FromRole="PhoneNumber" ToRole="Person" />
+    <Property Type="Int32" Name="PersonPersonId" Nullable="false" />
+  </EntityType>
+  <Association Name="PersonAddress">
+    <End Type="Test1DataModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="Test1DataModel.Address" Role="Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPhoneNumber">
+    <End Type="Test1DataModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="Test1DataModel.PhoneNumber" Role="PhoneNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhoneNumber">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

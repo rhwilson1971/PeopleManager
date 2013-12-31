@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Test1DataModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Test1DataModelStoreContainer">
+    <EntitySet Name="People" EntityType="Test1DataModel.Store.People" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Addresses" EntityType="Test1DataModel.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PhoneNumbers" EntityType="Test1DataModel.Store.PhoneNumbers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PersonAddress" Association="Test1DataModel.Store.PersonAddress">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPhoneNumber" Association="Test1DataModel.Store.PersonPhoneNumber">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PhoneNumber" EntitySet="PhoneNumbers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Street1" Type="nvarchar" Nullable="false" />
+    <Property Name="Street2" Type="nvarchar" Nullable="true" />
+    <Property Name="Street3" Type="nvarchar" Nullable="true" />
+    <Property Name="City" Type="nvarchar" Nullable="false" />
+    <Property Name="State" Type="nvarchar" Nullable="false" />
+    <Property Name="Zip" Type="nvarchar" Nullable="false" />
+    <Property Name="AddressType" Type="nvarchar" Nullable="false" />
+    <Property Name="PersonPersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhoneNumbers">
+    <Key>
+      <PropertyRef Name="PhoneId" />
+    </Key>
+    <Property Name="PhoneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" Nullable="false" />
+    <Property Name="PhoneType" Type="nvarchar" Nullable="false" />
+    <Property Name="PersonPersonId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="PersonAddress">
+    <End Role="Person" Type="Test1DataModel.Store.People" Multiplicity="1" />
+    <End Role="Address" Type="Test1DataModel.Store.Addresses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPhoneNumber">
+    <End Role="Person" Type="Test1DataModel.Store.People" Multiplicity="1" />
+    <End Role="PhoneNumber" Type="Test1DataModel.Store.PhoneNumbers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="PhoneNumber">
+        <PropertyRef Name="PersonPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="MediaServicesManager.Management.Views.PeopleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+
+        <DataTemplate x:Key="PersonTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Margin="5" Source="{Binding Image}"/>
+                <StackPanel Grid.Column="1" Margin="5"  Orientation="Horizontal">
+                    <TextBlock FontWeight="ExtraBold" Text="{Binding FirstName}" />
+                    <TextBlock Text="{Binding LastName}" Margin="5,0,5,0"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <TabControl x:Name="PeopleViewTab">
+            <TabItem Header="All People" >
+                <ListBox ItemsSource="{Binding People}"
+                         ItemTemplate="{DynamicResource PersonTemplate}" />
+            </TabItem>
+            
+            <TabItem Header="Person">
+                
+            </TabItem>
+            
+        </TabControl>
+    </Grid>
+</UserControl>

@@ -1,0 +1,223 @@
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 12/31/2013 09:41:02
+-- Generated from EDMX file: C:\Users\rwilson\Documents\GitHub\PeopleManager\PeopleManager.Data\PeopleManagerDataModel.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    ALTER TABLE [Addresses] DROP CONSTRAINT [FK_PersonAddress];
+GO
+    ALTER TABLE [PhoneNumbers] DROP CONSTRAINT [FK_PersonPhoneNumber];
+GO
+    ALTER TABLE [ProgramDetails] DROP CONSTRAINT [FK_ProgramProgramDetail];
+GO
+    ALTER TABLE [ProgramDetails] DROP CONSTRAINT [FK_ResourceProgramDetail];
+GO
+    ALTER TABLE [ProgramDetails] DROP CONSTRAINT [FK_PersonProgramDetail];
+GO
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [Addresses];
+GO
+    DROP TABLE [People];
+GO
+    DROP TABLE [PhoneNumbers];
+GO
+    DROP TABLE [Resources];
+GO
+    DROP TABLE [Programs];
+GO
+    DROP TABLE [ProgramDetails];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'Addresses'
+CREATE TABLE [Addresses] (
+    [AddressId] int IDENTITY(1,1) NOT NULL,
+    [Street1] nvarchar(4000)  NOT NULL,
+    [Street2] nvarchar(4000)  NULL,
+    [Street3] nvarchar(4000)  NULL,
+    [City] nvarchar(4000)  NOT NULL,
+    [State] nvarchar(4000)  NOT NULL,
+    [Zip] nvarchar(4000)  NOT NULL,
+    [AddressType] nvarchar(4000)  NOT NULL,
+    [PersonPersonId] int  NOT NULL
+);
+GO
+
+-- Creating table 'People'
+CREATE TABLE [People] (
+    [PersonId] int IDENTITY(1,1) NOT NULL,
+    [FirstName] nvarchar(4000)  NOT NULL,
+    [LastName] nvarchar(4000)  NOT NULL,
+    [Image] nvarchar(500)  NULL
+);
+GO
+
+-- Creating table 'PhoneNumbers'
+CREATE TABLE [PhoneNumbers] (
+    [PhoneId] int IDENTITY(1,1) NOT NULL,
+    [Number] nvarchar(4000)  NOT NULL,
+    [PhoneType] nvarchar(4000)  NOT NULL,
+    [PersonPersonId] int  NOT NULL
+);
+GO
+
+-- Creating table 'Resources'
+CREATE TABLE [Resources] (
+    [ResourceId] int IDENTITY(1,1) NOT NULL,
+    [Type] nvarchar(4000)  NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'Programs'
+CREATE TABLE [Programs] (
+    [ProgramId] int IDENTITY(1,1) NOT NULL,
+    [Type] nvarchar(4000)  NOT NULL,
+    [TimeStart] datetime  NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [EndTime] datetime  NOT NULL
+);
+GO
+
+-- Creating table 'ProgramDetails'
+CREATE TABLE [ProgramDetails] (
+    [ProgramDetailId] int IDENTITY(1,1) NOT NULL,
+    [ProgramProgramId] int  NOT NULL,
+    [ResourceResourceId] int  NOT NULL,
+    [PersonPersonId] int  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [AddressId] in table 'Addresses'
+ALTER TABLE [Addresses]
+ADD CONSTRAINT [PK_Addresses]
+    PRIMARY KEY ([AddressId] );
+GO
+
+-- Creating primary key on [PersonId] in table 'People'
+ALTER TABLE [People]
+ADD CONSTRAINT [PK_People]
+    PRIMARY KEY ([PersonId] );
+GO
+
+-- Creating primary key on [PhoneId] in table 'PhoneNumbers'
+ALTER TABLE [PhoneNumbers]
+ADD CONSTRAINT [PK_PhoneNumbers]
+    PRIMARY KEY ([PhoneId] );
+GO
+
+-- Creating primary key on [ResourceId] in table 'Resources'
+ALTER TABLE [Resources]
+ADD CONSTRAINT [PK_Resources]
+    PRIMARY KEY ([ResourceId] );
+GO
+
+-- Creating primary key on [ProgramId] in table 'Programs'
+ALTER TABLE [Programs]
+ADD CONSTRAINT [PK_Programs]
+    PRIMARY KEY ([ProgramId] );
+GO
+
+-- Creating primary key on [ProgramDetailId] in table 'ProgramDetails'
+ALTER TABLE [ProgramDetails]
+ADD CONSTRAINT [PK_ProgramDetails]
+    PRIMARY KEY ([ProgramDetailId] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [PersonPersonId] in table 'Addresses'
+ALTER TABLE [Addresses]
+ADD CONSTRAINT [FK_PersonAddress]
+    FOREIGN KEY ([PersonPersonId])
+    REFERENCES [People]
+        ([PersonId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonAddress'
+CREATE INDEX [IX_FK_PersonAddress]
+ON [Addresses]
+    ([PersonPersonId]);
+GO
+
+-- Creating foreign key on [PersonPersonId] in table 'PhoneNumbers'
+ALTER TABLE [PhoneNumbers]
+ADD CONSTRAINT [FK_PersonPhoneNumber]
+    FOREIGN KEY ([PersonPersonId])
+    REFERENCES [People]
+        ([PersonId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonPhoneNumber'
+CREATE INDEX [IX_FK_PersonPhoneNumber]
+ON [PhoneNumbers]
+    ([PersonPersonId]);
+GO
+
+-- Creating foreign key on [ProgramProgramId] in table 'ProgramDetails'
+ALTER TABLE [ProgramDetails]
+ADD CONSTRAINT [FK_ProgramProgramDetail]
+    FOREIGN KEY ([ProgramProgramId])
+    REFERENCES [Programs]
+        ([ProgramId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ProgramProgramDetail'
+CREATE INDEX [IX_FK_ProgramProgramDetail]
+ON [ProgramDetails]
+    ([ProgramProgramId]);
+GO
+
+-- Creating foreign key on [ResourceResourceId] in table 'ProgramDetails'
+ALTER TABLE [ProgramDetails]
+ADD CONSTRAINT [FK_ResourceProgramDetail]
+    FOREIGN KEY ([ResourceResourceId])
+    REFERENCES [Resources]
+        ([ResourceId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ResourceProgramDetail'
+CREATE INDEX [IX_FK_ResourceProgramDetail]
+ON [ProgramDetails]
+    ([ResourceResourceId]);
+GO
+
+-- Creating foreign key on [PersonPersonId] in table 'ProgramDetails'
+ALTER TABLE [ProgramDetails]
+ADD CONSTRAINT [FK_PersonProgramDetail]
+    FOREIGN KEY ([PersonPersonId])
+    REFERENCES [People]
+        ([PersonId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PersonProgramDetail'
+CREATE INDEX [IX_FK_PersonProgramDetail]
+ON [ProgramDetails]
+    ([PersonPersonId]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------
